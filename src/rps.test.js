@@ -17,10 +17,6 @@ test("cannot play with symbol ⚽", () => {
   expect(() => rps.play("⚽")).toThrow(Error);
 });
 
-test("cannot play with symbol ⚽", () => {
-  expect(() => rps.play("⚽")).toThrow(Error);
-});
-
 test("cannot move more than 2 times", () => {
   expect(() => {
     rps.play("🖐");
@@ -29,7 +25,11 @@ test("cannot move more than 2 times", () => {
   }).toThrow(Error);
 });
 
-test("cannot check winner if not played 2 times", () => {
+test("cannot check winner with no moves", () => {
+  expect(() => rps.winner()).toThrow(Error);
+});
+
+test("cannot check winner without 2 moves", () => {
   rps.play("🖐");
   expect(() => rps.winner()).toThrow(Error);
 });
