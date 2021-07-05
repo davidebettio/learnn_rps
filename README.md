@@ -10,6 +10,6 @@
 
 `yarn start`
 
-### Rock Paper Scissors Lizard Spock Variant
+### rock paper scissors lizard spock variant
 
 change `allowedMoves` array in `rps.js`
