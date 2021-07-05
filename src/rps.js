@@ -1,4 +1,4 @@
-class Game {
+class RPS {
   static allowedMoves = [
     {
       name: "paper",
@@ -54,7 +54,7 @@ class Game {
       throw new Error("no more moves");
     }
 
-    const move = Game.allowedMoves.find((m) => m.symbol === symbol);
+    const move = RPS.allowedMoves.find((m) => m.symbol === symbol);
     if (!move) {
       throw new Error("move not allowed");
     }
@@ -80,4 +80,4 @@ class Game {
   }
 }
 
-module.exports = Game;
+module.exports = RPS;
