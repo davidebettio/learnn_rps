@@ -1,4 +1,4 @@
-const game = require("./game");
+const Game = require("./game");
 
 (() => {
   const game = new Game();
@@ -8,8 +8,8 @@ const game = require("./game");
   // game.play("🤏"); // lizard
   // game.play("🖖"); // spock
 
-  game.play("🤏"); // lizard
-  game.play("🤏"); // lizard
+  game.play("🖐"); // lizard
+  game.play("👊"); // lizard
 
   const winner = game.winner();
   console.log(`result: ${winner === 0 ? "pair" : `player ${winner} wins`}`);
